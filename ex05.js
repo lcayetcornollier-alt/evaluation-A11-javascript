@@ -1,12 +1,12 @@
-// ex05.js
+// ex04.js
 
-function isEnoughMoney(price, wallet) {
-    let a = wallet - price
-    if (a < 0){
-        return false
+function isSumEven(a, b) {
+    let l = a + b
+	if (l % 2 == 0 ) {
+        return true 
     }
-    return true 
+    return false
 }
 
-console.log(isEnoughMoney(10, 0)); // Résultat attendu: false
-console.log(isEnoughMoney(5, 25)); // Résultat attendu: true
+console.log(isSumEven(1, 3)); // Résultat attendu: true
+console.log(isSumEven(1, 0)); // Résultat attendu: false

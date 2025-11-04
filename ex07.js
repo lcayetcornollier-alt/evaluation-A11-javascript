@@ -1,26 +1,23 @@
-// ex07.js
+// ex06.js
 
-function isNationalIDValid(name, age, zip, password) {
-	if (name == "") {
-		return false;
-	}
-	if (age < 18 && age > 65) {
-		return false;
-	}
-	if (zip <= 99999 && zip < 0) {
-		return false;
-	}
-	if (password == "qwerty") {
-		return false;
-	}
-	if (password == "azerty") {
-		return false;
-	}
-	if (password == "1234") {
-		return false;
-	}
-  return true 
+function getReduction(price, age) {
+	if ( age > 25){
+        return price
+    }
+    if ( age <= 25 ){
+        let a = price / 100
+        return a * 30
+    }
+     if ( age <= 18 ){
+        let a = price / 100
+        return a * 50
+    }
+     if ( age < 5 ){
+        let a = price / 100
+        return a * 100
+    }
+
 }
 
-console.log(isNationalIDValid("", 18, 69100, "hello")); // Résultat attendu: false
-console.log(isNationalIDValid("John", 18, 69100, "amerty")); // Résultat attendu: true
+console.log(getReduction(10, 5)); // Résultat attendu: 0
+console.log(getReduction(150, 25)); // Résultat attendu: 45

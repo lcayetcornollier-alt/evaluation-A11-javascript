@@ -1,16 +1,26 @@
-// ex08.js
+// ex07.js
 
-function calculate(n1, n2, operation) {
-	return operation(n1, n2)
+function isNationalIDValid(name, age, zip, password) {
+	if (name == "") {
+		return false;
+	}
+	if (age < 18 && age > 65) {
+		return false;
+	}
+	if (zip <= 99999 && zip < 0) {
+		return false;
+	}
+	if (password == "qwerty") {
+		return false;
+	}
+	if (password == "azerty") {
+		return false;
+	}
+	if (password == "1234") {
+		return false;
+	}
+  return true 
 }
 
-function addition(n1, n2) {
-	return n1 + n2 
-}
-
-function subtraction(n1, n2) {
-	return n1 - n2 
-}
-
-console.log(calculate(0, 1, addition)); // Résultat attendu: 1
-console.log(calculate(0, 10, subtraction)); // Résultat attendu: -10
+console.log(isNationalIDValid("", 18, 69100, "hello")); // Résultat attendu: false
+console.log(isNationalIDValid("John", 18, 69100, "amerty")); // Résultat attendu: true
