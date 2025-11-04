@@ -12,7 +12,7 @@ function getReduction(price, age) {
 		let a = price / 100;
 		return a * 50;
 	}
-	if (age < 5) {
+	if (age <= 5) {
 		let a = price / 100;
 		return a * 100;
 	}
