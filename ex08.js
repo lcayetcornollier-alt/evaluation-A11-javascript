@@ -19,7 +19,7 @@ function isNationalIDValid(name, age, zip, password) {
 	if (password == "1234") {
 		return false;
 	}
-  return true 
+	return true;
 }
 
 console.log(isNationalIDValid("", 18, 69100, "hello")); // Résultat attendu: false

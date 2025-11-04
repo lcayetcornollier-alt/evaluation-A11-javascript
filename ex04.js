@@ -2,8 +2,8 @@
 
 function areaHardcoreCalculator(x1, y1, x2, y2) {
 	let y = y1 - y2;
-    let x = x1 - x2;
-  return  x * y   
+	let x = x1 - x2;
+	return x * y;
 }
 
 console.log(areaHardcoreCalculator(0, 1, 3, 2)); // Résultat attendu: 3
